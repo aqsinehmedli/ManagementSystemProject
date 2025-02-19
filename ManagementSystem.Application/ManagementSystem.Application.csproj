@@ -1,0 +1,26 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="MediatR" Version="12.4.1" />
+    <PackageReference Include="MediatR.Extensions.Microsoft.DependencyInjection" Version="11.1.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="8.0.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="8.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="AutoMapper\" />
+    <Folder Include="CQRS\Customers\Commands\Responses\" />
+    <Folder Include="CQRS\Customers\Commands\Requests\" />
+    <Folder Include="CQRS\Customers\Handlers\CommandHandlers\" />
+    <Folder Include="CQRS\Customers\Handlers\Responses\QueryHandlers\" />
+    <Folder Include="CQRS\Customers\Queries\Responses\" />
+    <Folder Include="CQRS\Customers\Queries\Requests\" />
+  </ItemGroup>
+
+</Project>
