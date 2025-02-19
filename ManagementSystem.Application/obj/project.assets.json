@@ -1004,6 +1004,49 @@
             "rid": "win"
           }
         }
+      },
+      "ManagementSystem.Common/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore": "8.0.0",
+          "Microsoft.EntityFrameworkCore.SqlServer": "8.0.0"
+        },
+        "compile": {
+          "bin/placeholder/ManagementSystem.Common.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/ManagementSystem.Common.dll": {}
+        }
+      },
+      "ManagementSystem.Domain/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore": "8.0.0",
+          "Microsoft.EntityFrameworkCore.SqlServer": "8.0.0"
+        },
+        "compile": {
+          "bin/placeholder/ManagementSystem.Domain.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/ManagementSystem.Domain.dll": {}
+        }
+      },
+      "ManagementSystem.Repository/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "dependencies": {
+          "ManagementSystem.Domain": "1.0.0",
+          "Microsoft.EntityFrameworkCore": "8.0.0",
+          "Microsoft.EntityFrameworkCore.SqlServer": "8.0.0"
+        },
+        "compile": {
+          "bin/placeholder/ManagementSystem.Repository.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/ManagementSystem.Repository.dll": {}
+        }
       }
     }
   },
@@ -2739,10 +2782,27 @@
         "system.windows.extensions.nuspec",
         "useSharedDesignerContext.txt"
       ]
+    },
+    "ManagementSystem.Common/1.0.0": {
+      "type": "project",
+      "path": "../ManagementSystem.Common/ManagementSystem.Common.csproj",
+      "msbuildProject": "../ManagementSystem.Common/ManagementSystem.Common.csproj"
+    },
+    "ManagementSystem.Domain/1.0.0": {
+      "type": "project",
+      "path": "../ManagementSystem.Domain/ManagementSystem.Domain.csproj",
+      "msbuildProject": "../ManagementSystem.Domain/ManagementSystem.Domain.csproj"
+    },
+    "ManagementSystem.Repository/1.0.0": {
+      "type": "project",
+      "path": "../ManagementSystem.Repository/ManagementSystem.Repository.csproj",
+      "msbuildProject": "../ManagementSystem.Repository/ManagementSystem.Repository.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net8.0": [
+      "ManagementSystem.Common >= 1.0.0",
+      "ManagementSystem.Repository >= 1.0.0",
       "MediatR >= 12.4.1",
       "MediatR.Extensions.Microsoft.DependencyInjection >= 11.1.0",
       "Microsoft.EntityFrameworkCore >= 8.0.0",
@@ -2776,7 +2836,14 @@
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\User\\source\\repos\\ManagementSystemProject\\ManagementSystem.Common\\ManagementSystem.Common.csproj": {
+              "projectPath": "C:\\Users\\User\\source\\repos\\ManagementSystemProject\\ManagementSystem.Common\\ManagementSystem.Common.csproj"
+            },
+            "C:\\Users\\User\\source\\repos\\ManagementSystemProject\\ManagementSystem.Repository\\ManagementSystem.Repository.csproj": {
+              "projectPath": "C:\\Users\\User\\source\\repos\\ManagementSystemProject\\ManagementSystem.Repository\\ManagementSystem.Repository.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

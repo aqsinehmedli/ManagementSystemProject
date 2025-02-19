@@ -16,9 +16,10 @@ public class SqlCustomerRepository : BaseSqlRepository, ICustomerRepository
     public async Task AddAsync(Customer customer)
     {
         var sql = @"INSERT INTO Customers ([Name],[CreatedBy])
-                    VALUES(@Name,@CreatedBy)";
+                    VALUES(@Name,@CreatedBy); SELECT SCOPE_IDENTITY()";
         using var connection = OpenConnection();
-        await connection.ExecuteScalarAsync<int>(sql, customer);
+        var generatedId = await connection.ExecuteScalarAsync<int>(sql, customer);
+        customer.Id = generatedId;  
     }
 
     public async Task<bool> Delete(int id, int deletedBy)
