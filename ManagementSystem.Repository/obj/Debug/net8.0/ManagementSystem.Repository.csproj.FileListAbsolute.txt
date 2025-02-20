@@ -1,0 +1,16 @@
+C:\Users\User\source\repos\ManagementSystemProject\ManagementSystem.Repository\bin\Debug\net8.0\ManagementSystem.Repository.deps.json
+C:\Users\User\source\repos\ManagementSystemProject\ManagementSystem.Repository\bin\Debug\net8.0\ManagementSystem.Repository.dll
+C:\Users\User\source\repos\ManagementSystemProject\ManagementSystem.Repository\bin\Debug\net8.0\ManagementSystem.Repository.pdb
+C:\Users\User\source\repos\ManagementSystemProject\ManagementSystem.Repository\bin\Debug\net8.0\ManagementSystem.Domain.dll
+C:\Users\User\source\repos\ManagementSystemProject\ManagementSystem.Repository\bin\Debug\net8.0\ManagementSystem.Domain.pdb
+C:\Users\User\source\repos\ManagementSystemProject\ManagementSystem.Repository\obj\Debug\net8.0\ManagementSystem.Repository.csproj.AssemblyReference.cache
+C:\Users\User\source\repos\ManagementSystemProject\ManagementSystem.Repository\obj\Debug\net8.0\ManagementSystem.Repository.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\User\source\repos\ManagementSystemProject\ManagementSystem.Repository\obj\Debug\net8.0\ManagementSystem.Repository.AssemblyInfoInputs.cache
+C:\Users\User\source\repos\ManagementSystemProject\ManagementSystem.Repository\obj\Debug\net8.0\ManagementSystem.Repository.AssemblyInfo.cs
+C:\Users\User\source\repos\ManagementSystemProject\ManagementSystem.Repository\obj\Debug\net8.0\ManagementSystem.Repository.csproj.CoreCompileInputs.cache
+C:\Users\User\source\repos\ManagementSystemProject\ManagementSystem.Repository\obj\Debug\net8.0\ManagementSystem.Repository.sourcelink.json
+C:\Users\User\source\repos\ManagementSystemProject\ManagementSystem.Repository\obj\Debug\net8.0\Manageme.DC429414.Up2Date
+C:\Users\User\source\repos\ManagementSystemProject\ManagementSystem.Repository\obj\Debug\net8.0\ManagementSystem.Repository.dll
+C:\Users\User\source\repos\ManagementSystemProject\ManagementSystem.Repository\obj\Debug\net8.0\refint\ManagementSystem.Repository.dll
+C:\Users\User\source\repos\ManagementSystemProject\ManagementSystem.Repository\obj\Debug\net8.0\ManagementSystem.Repository.pdb
+C:\Users\User\source\repos\ManagementSystemProject\ManagementSystem.Repository\obj\Debug\net8.0\ref\ManagementSystem.Repository.dll

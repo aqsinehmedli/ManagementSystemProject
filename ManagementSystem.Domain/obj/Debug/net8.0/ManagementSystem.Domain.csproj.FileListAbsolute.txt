@@ -1,0 +1,13 @@
+C:\Users\User\source\repos\ManagementSystemProject\ManagementSystem.Domain\bin\Debug\net8.0\ManagementSystem.Domain.deps.json
+C:\Users\User\source\repos\ManagementSystemProject\ManagementSystem.Domain\bin\Debug\net8.0\ManagementSystem.Domain.dll
+C:\Users\User\source\repos\ManagementSystemProject\ManagementSystem.Domain\bin\Debug\net8.0\ManagementSystem.Domain.pdb
+C:\Users\User\source\repos\ManagementSystemProject\ManagementSystem.Domain\obj\Debug\net8.0\ManagementSystem.Domain.csproj.AssemblyReference.cache
+C:\Users\User\source\repos\ManagementSystemProject\ManagementSystem.Domain\obj\Debug\net8.0\ManagementSystem.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\User\source\repos\ManagementSystemProject\ManagementSystem.Domain\obj\Debug\net8.0\ManagementSystem.Domain.AssemblyInfoInputs.cache
+C:\Users\User\source\repos\ManagementSystemProject\ManagementSystem.Domain\obj\Debug\net8.0\ManagementSystem.Domain.AssemblyInfo.cs
+C:\Users\User\source\repos\ManagementSystemProject\ManagementSystem.Domain\obj\Debug\net8.0\ManagementSystem.Domain.csproj.CoreCompileInputs.cache
+C:\Users\User\source\repos\ManagementSystemProject\ManagementSystem.Domain\obj\Debug\net8.0\ManagementSystem.Domain.sourcelink.json
+C:\Users\User\source\repos\ManagementSystemProject\ManagementSystem.Domain\obj\Debug\net8.0\ManagementSystem.Domain.dll
+C:\Users\User\source\repos\ManagementSystemProject\ManagementSystem.Domain\obj\Debug\net8.0\refint\ManagementSystem.Domain.dll
+C:\Users\User\source\repos\ManagementSystemProject\ManagementSystem.Domain\obj\Debug\net8.0\ManagementSystem.Domain.pdb
+C:\Users\User\source\repos\ManagementSystemProject\ManagementSystem.Domain\obj\Debug\net8.0\ref\ManagementSystem.Domain.dll

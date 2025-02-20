@@ -46,6 +46,61 @@
           }
         }
       },
+      "Dapper/2.1.66": {
+        "type": "package",
+        "compile": {
+          "lib/net8.0/Dapper.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/Dapper.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "MediatR/11.1.0": {
+        "type": "package",
+        "dependencies": {
+          "MediatR.Contracts": "1.0.1"
+        },
+        "compile": {
+          "lib/netstandard2.1/MediatR.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.1/MediatR.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "MediatR.Contracts/1.0.1": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/MediatR.Contracts.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/MediatR.Contracts.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "MediatR.Extensions.Microsoft.DependencyInjection/11.1.0": {
+        "type": "package",
+        "dependencies": {
+          "MediatR": "[11.0.0, 12.0.0)",
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "7.0.0"
+        },
+        "compile": {
+          "lib/netstandard2.1/MediatR.Extensions.Microsoft.DependencyInjection.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.1/MediatR.Extensions.Microsoft.DependencyInjection.dll": {}
+        }
+      },
       "Microsoft.Bcl.AsyncInterfaces/1.1.1": {
         "type": "package",
         "compile": {
@@ -1048,6 +1103,84 @@
             "rid": "win"
           }
         }
+      },
+      "ManagementSystem.Application/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "dependencies": {
+          "ManagementSystem.Common": "1.0.0",
+          "ManagementSystem.Repository": "1.0.0",
+          "MediatR": "11.1.0",
+          "MediatR.Extensions.Microsoft.DependencyInjection": "11.1.0",
+          "Microsoft.EntityFrameworkCore": "8.0.0",
+          "Microsoft.EntityFrameworkCore.SqlServer": "8.0.0"
+        },
+        "compile": {
+          "bin/placeholder/ManagementSystem.Application.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/ManagementSystem.Application.dll": {}
+        }
+      },
+      "ManagementSystem.Common/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore": "8.0.0",
+          "Microsoft.EntityFrameworkCore.SqlServer": "8.0.0"
+        },
+        "compile": {
+          "bin/placeholder/ManagementSystem.Common.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/ManagementSystem.Common.dll": {}
+        }
+      },
+      "ManagementSystem.DAL.SqlServer/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "dependencies": {
+          "Dapper": "2.1.66",
+          "ManagementSystem.Domain": "1.0.0",
+          "ManagementSystem.Repository": "1.0.0",
+          "Microsoft.EntityFrameworkCore": "8.0.0",
+          "Microsoft.EntityFrameworkCore.SqlServer": "8.0.0"
+        },
+        "compile": {
+          "bin/placeholder/ManagementSystem.DAL.SqlServer.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/ManagementSystem.DAL.SqlServer.dll": {}
+        }
+      },
+      "ManagementSystem.Domain/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore": "8.0.0",
+          "Microsoft.EntityFrameworkCore.SqlServer": "8.0.0"
+        },
+        "compile": {
+          "bin/placeholder/ManagementSystem.Domain.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/ManagementSystem.Domain.dll": {}
+        }
+      },
+      "ManagementSystem.Repository/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "dependencies": {
+          "ManagementSystem.Domain": "1.0.0",
+          "Microsoft.EntityFrameworkCore": "8.0.0",
+          "Microsoft.EntityFrameworkCore.SqlServer": "8.0.0"
+        },
+        "compile": {
+          "bin/placeholder/ManagementSystem.Repository.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/ManagementSystem.Repository.dll": {}
+        }
       }
     }
   },
@@ -1088,6 +1221,68 @@
         "azureicon.png",
         "lib/netstandard2.0/Azure.Identity.dll",
         "lib/netstandard2.0/Azure.Identity.xml"
+      ]
+    },
+    "Dapper/2.1.66": {
+      "sha512": "/q77jUgDOS+bzkmk3Vy9SiWMaetTw+NOoPAV0xPBsGVAyljd5S6P+4RUW7R3ZUGGr9lDRyPKgAMj2UAOwvqZYw==",
+      "type": "package",
+      "path": "dapper/2.1.66",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Dapper.png",
+        "dapper.2.1.66.nupkg.sha512",
+        "dapper.nuspec",
+        "lib/net461/Dapper.dll",
+        "lib/net461/Dapper.xml",
+        "lib/net8.0/Dapper.dll",
+        "lib/net8.0/Dapper.xml",
+        "lib/netstandard2.0/Dapper.dll",
+        "lib/netstandard2.0/Dapper.xml",
+        "readme.md"
+      ]
+    },
+    "MediatR/11.1.0": {
+      "sha512": "YIbtrLOyeCuIv8vIuHL/mMdls5xmgS36pIOJDxKZuu55nxA2MI2Z+E/Uk0z+F/LE11AGmpjplOM0NZ91m5LQBA==",
+      "type": "package",
+      "path": "mediatr/11.1.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "gradient_128x128.png",
+        "lib/netstandard2.1/MediatR.dll",
+        "lib/netstandard2.1/MediatR.xml",
+        "mediatr.11.1.0.nupkg.sha512",
+        "mediatr.nuspec"
+      ]
+    },
+    "MediatR.Contracts/1.0.1": {
+      "sha512": "NsRvOxthhkYml4DcBMyJsmym8C4MchioH7wxKVPEg7plFj9Euh/i4IcmZ3Gvgx6+K8obeuhPeJdoBl56wnuo3A==",
+      "type": "package",
+      "path": "mediatr.contracts/1.0.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "gradient_128x128.png",
+        "lib/net461/MediatR.Contracts.dll",
+        "lib/net461/MediatR.Contracts.xml",
+        "lib/netstandard2.0/MediatR.Contracts.dll",
+        "lib/netstandard2.0/MediatR.Contracts.xml",
+        "mediatr.contracts.1.0.1.nupkg.sha512",
+        "mediatr.contracts.nuspec"
+      ]
+    },
+    "MediatR.Extensions.Microsoft.DependencyInjection/11.1.0": {
+      "sha512": "RW3etRuy6Xp63cgqfC0r/ITOtUT0f9ymJl1+1XZdzsYUsfv7WBPC2kXGOP8IYpY/6c4Q6805vbIW/88DopUs3w==",
+      "type": "package",
+      "path": "mediatr.extensions.microsoft.dependencyinjection/11.1.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "gradient_128x128.png",
+        "lib/netstandard2.1/MediatR.Extensions.Microsoft.DependencyInjection.dll",
+        "mediatr.extensions.microsoft.dependencyinjection.11.1.0.nupkg.sha512",
+        "mediatr.extensions.microsoft.dependencyinjection.nuspec"
       ]
     },
     "Microsoft.Bcl.AsyncInterfaces/1.1.1": {
@@ -3068,10 +3263,37 @@
         "system.windows.extensions.nuspec",
         "useSharedDesignerContext.txt"
       ]
+    },
+    "ManagementSystem.Application/1.0.0": {
+      "type": "project",
+      "path": "../ManagementSystem.Application/ManagementSystem.Application.csproj",
+      "msbuildProject": "../ManagementSystem.Application/ManagementSystem.Application.csproj"
+    },
+    "ManagementSystem.Common/1.0.0": {
+      "type": "project",
+      "path": "../ManagementSystem.Common/ManagementSystem.Common.csproj",
+      "msbuildProject": "../ManagementSystem.Common/ManagementSystem.Common.csproj"
+    },
+    "ManagementSystem.DAL.SqlServer/1.0.0": {
+      "type": "project",
+      "path": "../ManagementSystem.DAL.SqlServer/ManagementSystem.DAL.SqlServer.csproj",
+      "msbuildProject": "../ManagementSystem.DAL.SqlServer/ManagementSystem.DAL.SqlServer.csproj"
+    },
+    "ManagementSystem.Domain/1.0.0": {
+      "type": "project",
+      "path": "../ManagementSystem.Domain/ManagementSystem.Domain.csproj",
+      "msbuildProject": "../ManagementSystem.Domain/ManagementSystem.Domain.csproj"
+    },
+    "ManagementSystem.Repository/1.0.0": {
+      "type": "project",
+      "path": "../ManagementSystem.Repository/ManagementSystem.Repository.csproj",
+      "msbuildProject": "../ManagementSystem.Repository/ManagementSystem.Repository.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net8.0": [
+      "ManagementSystem.Application >= 1.0.0",
+      "ManagementSystem.DAL.SqlServer >= 1.0.0",
       "Microsoft.EntityFrameworkCore >= 8.0.0",
       "Microsoft.EntityFrameworkCore.SqlServer >= 8.0.0",
       "Swashbuckle.AspNetCore >= 6.4.0"
@@ -3104,7 +3326,14 @@
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\User\\source\\repos\\ManagementSystemProject\\ManagementSystem.Application\\ManagementSystem.Application.csproj": {
+              "projectPath": "C:\\Users\\User\\source\\repos\\ManagementSystemProject\\ManagementSystem.Application\\ManagementSystem.Application.csproj"
+            },
+            "C:\\Users\\User\\source\\repos\\ManagementSystemProject\\ManagementSystem.DAL.SqlServer\\ManagementSystem.DAL.SqlServer.csproj": {
+              "projectPath": "C:\\Users\\User\\source\\repos\\ManagementSystemProject\\ManagementSystem.DAL.SqlServer\\ManagementSystem.DAL.SqlServer.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

@@ -1,6 +1,5 @@
 ﻿using ManagementSystem.Application.CQRS.Customers.Commands.Requests;
 using ManagementSystem.Application.CQRS.Customers.Commands.Responses;
-using ManagementSystem.Common.GlobalResponses;
 using ManagementSystem.Common.GlobalResponses.Generics;
 using ManagementSystem.Domain.Entities;
 using ManagementSystem.Repository.Common;
@@ -17,7 +16,8 @@ public class CreateCustomerHandler(IUnitOfWork unitOfWork) : IRequestHandler<Cre
         Customer newCustomer = new()
         {
             Name = request.Name,
-        };
+            Email = request.Email,  
+        };  
         if (string.IsNullOrEmpty(newCustomer.Name))
         {
             return new Result<CreateCustomerResponse>
@@ -31,7 +31,8 @@ public class CreateCustomerHandler(IUnitOfWork unitOfWork) : IRequestHandler<Cre
         CreateCustomerResponse response = new()
         {
             Id = newCustomer.Id,
-            Name = request.Name,
+            Name = newCustomer.Name,
+            Email = newCustomer.Email,
         };
         return new Result<CreateCustomerResponse>
         {

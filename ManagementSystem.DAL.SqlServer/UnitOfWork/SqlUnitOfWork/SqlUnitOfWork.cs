@@ -9,6 +9,6 @@ public class SqlUnitOfWork(string connectionString, AppDbContext context) : IUni
 {
     private readonly string _connectionString = connectionString;
     private readonly AppDbContext _context = context;
-    public SqlCustomerRepository _sqlCustomerRepository;
-    public ICustomerRepository CustomerRepository => _sqlCustomerRepository ?? new SqlCustomerRepository(connectionString, _context);
+    public SqlCustomerRepository _customerRepository;
+    public ICustomerRepository CustomerRepository => _customerRepository ?? new SqlCustomerRepository(_connectionString, _context);
 }
