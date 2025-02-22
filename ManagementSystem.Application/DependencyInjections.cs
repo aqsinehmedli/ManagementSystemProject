@@ -11,9 +11,10 @@ public static class DependencyInjections
     {
         services.AddMediatR(Assembly.GetExecutingAssembly());
         services.AddMemoryCache();
+        services.Configure<IpRateLimitOptions>(configuration.GetSection("IpRateLimiting"));
         services.AddInMemoryRateLimiting();
         services.AddSingleton<IRateLimitConfiguration, RateLimitConfiguration>();
-        //services.Configure<IpRateLimitOptions>(Configuration.GetSection("ipRateLimiting");
+
         return services;
     }
 }

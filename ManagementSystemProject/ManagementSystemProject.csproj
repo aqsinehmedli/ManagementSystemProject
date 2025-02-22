@@ -18,4 +18,8 @@
     <ProjectReference Include="..\ManagementSystem.DAL.SqlServer\ManagementSystem.DAL.SqlServer.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Middlewares\" />
+  </ItemGroup>
+
 </Project>

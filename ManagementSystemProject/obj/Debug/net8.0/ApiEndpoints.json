@@ -77,15 +77,5 @@
       }
     ],
     "ReturnTypes": []
-  },
-  {
-    "ContainingType": "ManagementSystemProject.Controllers.RateLimitController",
-    "Method": "Get",
-    "RelativePath": "api/RateLimit",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [],
-    "ReturnTypes": []
   }
 ]
