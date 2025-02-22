@@ -6,6 +6,6 @@ namespace ManagementSystem.Application.CQRS.Customers.Commands.Requests;
 
 public class CreateCustomerRequest:IRequest<Result<CreateCustomerResponse>>
 {
-    public string? Name { get; set; }
-    public string? Email { get; set; }
+    public string Name { get; set; }
+    public string Email { get; set; }
 }

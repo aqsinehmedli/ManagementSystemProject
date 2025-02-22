@@ -16,14 +16,14 @@ public class CreateCustomerHandler(IUnitOfWork unitOfWork) : IRequestHandler<Cre
         Customer newCustomer = new()
         {
             Name = request.Name,
-            Email = request.Email,  
-        };  
-        if (string.IsNullOrEmpty(newCustomer.Name))
+            Email = request.Email,
+        };
+        if ((string.IsNullOrEmpty(newCustomer.Name) && string.IsNullOrEmpty(newCustomer.Email))) 
         {
             return new Result<CreateCustomerResponse>
             {
                 Data = null,
-                Errors = ["Customerin ad-i null ve ya bos ola bilmez"],
+                Errors = ["Customerin ad-i ve ya email null ve ya bos ola bilmez"],
                 IsSuccess = false
             };
         }

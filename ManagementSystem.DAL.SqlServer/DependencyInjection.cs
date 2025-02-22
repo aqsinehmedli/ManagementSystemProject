@@ -3,7 +3,6 @@ using ManagementSystem.DAL.SqlServer.UnitOfWork.SqlUnitOfWork;
 using ManagementSystem.Repository.Common;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
-
 namespace ManagementSystem.DAL.SqlServer;
 
 public static class DependencyInjection

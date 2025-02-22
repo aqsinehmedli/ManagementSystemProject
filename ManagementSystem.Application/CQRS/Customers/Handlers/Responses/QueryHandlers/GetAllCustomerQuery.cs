@@ -25,6 +25,7 @@ public class GetAllCategoryQuery(IUnitOfWork unitOfWork) : IRequestHandler<GetAl
             {
                 Id = customer.Id,
                 Name = customer.Name,
+                Email = customer.Email,
                 CreatedBy = customer.CreatedBy,
                 CreatedDate = customer.CreatedDate,
             };

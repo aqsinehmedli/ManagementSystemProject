@@ -47,7 +47,6 @@ public class SqlCustomerRepository : BaseSqlRepository, ICustomerRepository
     {
         return _context.Customers.OrderByDescending(c => c.CreatedDate).Where(c => c.IsDeleted == false);
     }
-
     public async Task<IEnumerable<Customer>> GetAllInitialDataAsync()
     {
         var sql = @"SELECT C.[Id],C[Name]
