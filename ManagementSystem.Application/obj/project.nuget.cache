@@ -1,10 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "TQTt0pyw5ZM=",
+  "dgSpecHash": "++d5c6axr/M=",
   "success": true,
   "projectFilePath": "C:\\Users\\User\\source\\repos\\ManagementSystemProject\\ManagementSystem.Application\\ManagementSystem.Application.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\User\\.nuget\\packages\\aspnetcoreratelimit\\5.0.0\\aspnetcoreratelimit.5.0.0.nupkg.sha512",
+    "C:\\Users\\User\\.nuget\\packages\\automapper\\14.0.0\\automapper.14.0.0.nupkg.sha512",
     "C:\\Users\\User\\.nuget\\packages\\azure.core\\1.25.0\\azure.core.1.25.0.nupkg.sha512",
     "C:\\Users\\User\\.nuget\\packages\\azure.identity\\1.7.0\\azure.identity.1.7.0.nupkg.sha512",
     "C:\\Users\\User\\.nuget\\packages\\mediatr\\11.1.0\\mediatr.11.1.0.nupkg.sha512",

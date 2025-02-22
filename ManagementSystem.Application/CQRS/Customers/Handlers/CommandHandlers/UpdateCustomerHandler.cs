@@ -1,4 +1,5 @@
-﻿using ManagementSystem.Application.CQRS.Customers.Commands.Requests;
+﻿using AutoMapper;
+using ManagementSystem.Application.CQRS.Customers.Commands.Requests;
 using ManagementSystem.Application.CQRS.Customers.Commands.Responses;
 using ManagementSystem.Common.GlobalResponses;
 using ManagementSystem.Common.GlobalResponses.Generics;
@@ -9,10 +10,10 @@ namespace ManagementSystem.Application.CQRS.Customers.Handlers.CommandHandlers;
 
 public class UpdateCustomerHandler
 {
-    public class Handler(IUnitOfWork unitOfWork) : IRequestHandler<UpdateCustomerRequest, Result<UpdateCustomerResponse>>
+    public class Handler(IUnitOfWork unitOfWork, IMapper mapper) : IRequestHandler<UpdateCustomerRequest, Result<UpdateCustomerResponse>>
     {
         private readonly IUnitOfWork _unitOfWork = unitOfWork;
-
+        private readonly IMapper _mapper = mapper;
         public async Task<Result<UpdateCustomerResponse>> Handle(UpdateCustomerRequest request, CancellationToken cancellationToken)
         {
             var customer = await _unitOfWork.CustomerRepository.GetByIdAsync(request.Id);
@@ -26,15 +27,11 @@ public class UpdateCustomerHandler
                 };
             }
             customer.Id = request.Id;
-            customer.Name = request.Name;   
+            customer.Name = request.Name;
             customer.Email = request.Email;
-             _unitOfWork.CustomerRepository.Update(customer);
-            var response = new UpdateCustomerResponse
-            {
-                Id = request.Id,
-                Name = request.Name,
-                Email = request.Email,
-            };
+            _unitOfWork.CustomerRepository.Update(customer);
+
+            var response = _mapper.Map<UpdateCustomerResponse>(customer);
             return new Result<UpdateCustomerResponse>
             {
                 Data = response,

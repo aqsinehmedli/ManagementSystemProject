@@ -1,4 +1,5 @@
-﻿using ManagementSystem.Application.CQRS.Customers.Commands.Requests;
+﻿using AutoMapper;
+using ManagementSystem.Application.CQRS.Customers.Commands.Requests;
 using ManagementSystem.Application.CQRS.Customers.Commands.Responses;
 using ManagementSystem.Common.GlobalResponses.Generics;
 using ManagementSystem.Domain.Entities;
@@ -10,14 +11,10 @@ namespace ManagementSystem.Application.CQRS.Customers.Handlers.CommandHandlers;
 public class CreateCustomerHandler(IUnitOfWork unitOfWork) : IRequestHandler<CreateCustomerRequest, Result<CreateCustomerResponse>>
 {
     private readonly IUnitOfWork _unitOfWork = unitOfWork;
-
+    private readonly IMapper _mapper;
     public async Task<Result<CreateCustomerResponse>> Handle(CreateCustomerRequest request, CancellationToken cancellationToken)
     {
-        Customer newCustomer = new()
-        {
-            Name = request.Name,
-            Email = request.Email,
-        };
+    var newCustomer = _mapper.Map<Customer>(request);
         if ((string.IsNullOrEmpty(newCustomer.Name) || string.IsNullOrEmpty(newCustomer.Email))) 
         {
             return new Result<CreateCustomerResponse>
@@ -28,12 +25,7 @@ public class CreateCustomerHandler(IUnitOfWork unitOfWork) : IRequestHandler<Cre
             };
         }
         await _unitOfWork.CustomerRepository.AddAsync(newCustomer);
-        CreateCustomerResponse response = new()
-        {
-            Id = newCustomer.Id,
-            Name = newCustomer.Name,
-            Email = newCustomer.Email,
-        };
+        var response = _mapper.Map<CreateCustomerResponse>(newCustomer);
         return new Result<CreateCustomerResponse>
         {
             Data = response,
