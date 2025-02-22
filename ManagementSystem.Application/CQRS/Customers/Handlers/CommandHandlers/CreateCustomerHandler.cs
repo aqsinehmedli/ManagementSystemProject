@@ -18,7 +18,7 @@ public class CreateCustomerHandler(IUnitOfWork unitOfWork) : IRequestHandler<Cre
             Name = request.Name,
             Email = request.Email,
         };
-        if ((string.IsNullOrEmpty(newCustomer.Name) && string.IsNullOrEmpty(newCustomer.Email))) 
+        if ((string.IsNullOrEmpty(newCustomer.Name) || string.IsNullOrEmpty(newCustomer.Email))) 
         {
             return new Result<CreateCustomerResponse>
             {

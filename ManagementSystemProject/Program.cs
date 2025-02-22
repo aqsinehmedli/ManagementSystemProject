@@ -14,7 +14,7 @@ builder.Services.AddApplicationServices(builder.Configuration);
 
 
 var app = builder.Build();
-app.UseIpRateLimiting();
+//app.UseIpRateLimiting();
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {

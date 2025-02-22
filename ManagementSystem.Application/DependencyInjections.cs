@@ -13,7 +13,7 @@ public static class DependencyInjections
         services.AddMemoryCache();
         services.AddInMemoryRateLimiting();
         services.AddSingleton<IRateLimitConfiguration, RateLimitConfiguration>();
-        services.Configure<IpRateLimitOptions>(Configuration.GetSection("ipRateLimiting");
+        //services.Configure<IpRateLimitOptions>(Configuration.GetSection("ipRateLimiting");
         return services;
     }
 }

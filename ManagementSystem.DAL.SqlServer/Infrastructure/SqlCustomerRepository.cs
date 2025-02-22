@@ -15,11 +15,11 @@ public class SqlCustomerRepository : BaseSqlRepository, ICustomerRepository
 
     public async Task AddAsync(Customer customer)
     {
-        var sql = @"INSERT INTO Customers ([Name],[CreatedBy])
-                    VALUES(@Name,@CreatedBy); SELECT SCOPE_IDENTITY()";
+        var sql = @"INSERT INTO Customers ([Name],[Email],[CreatedBy])
+                    VALUES(@Name,@Email,@CreatedBy); SELECT SCOPE_IDENTITY()";
         using var connection = OpenConnection();
         var generatedId = await connection.ExecuteScalarAsync<int>(sql, customer);
-        customer.Id = generatedId;  
+        customer.Id = generatedId;
     }
 
     public async Task<bool> Delete(int id, int deletedBy)
@@ -43,6 +43,7 @@ public class SqlCustomerRepository : BaseSqlRepository, ICustomerRepository
         return affectedRow > 0;
     }
 
+
     public IQueryable<Customer> GetAll()
     {
         return _context.Customers.OrderByDescending(c => c.CreatedDate).Where(c => c.IsDeleted == false);
@@ -58,7 +59,7 @@ public class SqlCustomerRepository : BaseSqlRepository, ICustomerRepository
 
     public async Task<Customer> GetByIdAsync(int id)
     {
-        var sql = @"SELECT C.* FROM Customers WHERE C.Id=@id and C.IsDeleted=0";
+        var sql = @"SELECT * FROM Customers WHERE Id=@id and IsDeleted=0";
         using var connection = OpenConnection();
         return await connection.QueryFirstOrDefaultAsync<Customer>(sql, new { id });
     }
@@ -66,9 +67,9 @@ public class SqlCustomerRepository : BaseSqlRepository, ICustomerRepository
     public void Update(Customer customer)
     {
         var sql = @"UPDATE Customers
-                    SET Name = @Name
-                    UpdatedBy = @UpdatedBy
-                    UpdateDate = @GETDATE()
+                    SET Name = @Name,
+                        Email = @Email,
+                    UpdatedDate = GETDATE()
                     WHERE Id = @id";
         using var connection = OpenConnection();
         connection.Query(sql, customer);

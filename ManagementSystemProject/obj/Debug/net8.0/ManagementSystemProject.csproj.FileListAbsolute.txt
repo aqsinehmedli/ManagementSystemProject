@@ -83,3 +83,5 @@ C:\Users\User\source\repos\ManagementSystemProject\ManagementSystemProject\bin\D
 C:\Users\User\source\repos\ManagementSystemProject\ManagementSystemProject\bin\Debug\net8.0\ManagementSystem.Domain.pdb
 C:\Users\User\source\repos\ManagementSystemProject\ManagementSystemProject\bin\Debug\net8.0\ManagementSystem.Repository.pdb
 C:\Users\User\source\repos\ManagementSystemProject\ManagementSystemProject\obj\Debug\net8.0\ManagementSystemProject.sourcelink.json
+C:\Users\User\source\repos\ManagementSystemProject\ManagementSystemProject\bin\Debug\net8.0\AspNetCoreRateLimit.dll
+C:\Users\User\source\repos\ManagementSystemProject\ManagementSystemProject\bin\Debug\net8.0\Newtonsoft.Json.dll
